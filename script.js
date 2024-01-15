@@ -4,20 +4,20 @@ let chartData = {
         label: '# of Values',
         data: [],
         backgroundColor: [
-            'grba(255, 99, 132, 0.5)',
-            'grba(54, 162, 235, 0.5)',
-            'grba(255, 206, 86, 0.5)',
-            'grba(75, 192, 192, 0.5)',
-            'grba(153, 102, 255, 0.5)',
-            'grba(255, 159, 64, 0.5)'
+            'rgba(255, 99, 132, 0.5)',
+            'rgba(54, 162, 235, 0.5)',
+            'rgba(255, 206, 86, 0.5)',
+            'rgba(75, 192, 192, 0.5)',
+            'rgba(153, 102, 255, 0.5)',
+            'rgba(255, 159, 64, 0.5)'
         ],
         borderColor: [
-            'grba(255, 99, 132, 1)',
-            'grba(54, 162, 235, 1)',
-            'grba(255, 206, 86, 1)',
-            'grba(75, 192, 192, 1)',
-            'grba(153, 102, 255, 1)',
-            'grba(255, 159, 64, 1)'
+            'rgba(255, 99, 132, 1)',
+            'rgba(54, 162, 235, 1)',
+            'rgba(255, 206, 86, 1)',
+            'rgba(75, 192, 192, 1)',
+            'rgba(153, 102, 255, 1)',
+            'rgba(255, 159, 64, 1)'
         ],
         borderWidth: 1
     }]
@@ -41,11 +41,7 @@ function createChart(type, height = 400) {
             },
             onClick: (event, activeElements) => {
                 if (activeElements.length > 0) {
-                    const {
-                        datasetIndex,
-                        index
-                    } =
-                        activeElements[0];
+                    const { datasetIndex, index } = activeElements[0];
                     removeData(datasetIndex, index)
                 }
             },
@@ -59,7 +55,7 @@ function createChart(type, height = 400) {
             }
         }
     });
-}
+};
 
 let myChart = createChart('bar')
 
